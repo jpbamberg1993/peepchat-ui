@@ -20,6 +20,11 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    DS: {
+      host: 'http://localhost:4000',
+      namespace: 'api'
     }
   };
 
@@ -43,7 +48,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.DS.host = 'https://polar-scrubland-91627.herokuapp.com';
   }
 
   return ENV;
